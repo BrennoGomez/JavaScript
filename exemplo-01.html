@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript básico</title>
+    <!--Bloco abaixo remete a estilização, usando CSS3-->
+    <style>
+        /*Estilizando o body*/
+        body {
+            background-color: blueviolet;
+            color: white;
+            font: normal 20pt arial;
+        }
+        /*Estilizando o h1*/
+        h1 {
+            color: yellowgreen;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Iniciando minha reciclagem. Ano 2022!</p>
+</body>
+<!--Bloco abaixo remete ao JavaScript, onde são geradas as ações da aplicação.-->
+<script>
+    var nome = prompt("Qual o seu nome?") // usando o comando prompt para receber um valor e guardar numa variável.
+    alert("Bem-vindo ao sistema, " + nome + "!") // concatenando string com variável
+
+    var numero1 = Number(prompt(nome + ", digite um número:")) // comando prompt retorna apenas o tipo String. Usando o comando Number, convertemos a String para Number.
+    var numero2 = Number(prompt("agora digite outro número:"))
+    var soma = numero1 + numero2;
+    alert(`A soma dos números é: ${soma}`) // usando crase ao invés de aspas e inserindo o símbolo de ${}, fazemos o uso de template string
+</script>
+
+</html>
