@@ -1,0 +1,49 @@
+<!--
+
+    Árvore DOM:
+            window
+location    document    history
+            html
+        head    body
+    meta    title
+            h1  p   p   div
+                    strong
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+
+    <style>
+        body {
+            background: blue;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Primeiros passos com DOM</h1>
+    <p>Aula de JavaScript básico</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim!</div>
+
+    <script>
+        var paragrafo1 = document.getElementsByTagName('p')[0] // acessando o DOM e pegando o primeiro elemento 'p' e guardando na variável
+        document.write("O elemento está assim: " + paragrafo1.innerText)
+
+        var corpo = document.body
+        corpo.style.background = 'gray'
+
+        var divi = document.getElementById('msg')
+        divi.style.background = 'blue'
+        divi.innerText = 'Alterando o valor de uma div'
+    </script>
+</body>
+</html>
