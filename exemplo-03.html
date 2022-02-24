@@ -1,0 +1,54 @@
+<!--
+    site da mozilla com todos eventos: https://developer.mozilla.org/pt-BR/docs/Web/Events
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Document Object Model</title>
+
+    <style>
+        div {
+            font: normal 15pt Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="area"> 
+        Interação com a div...
+    </div>
+    
+    <script>
+
+        var area = document.getElementById('area') //usando o recurso de globalização da variável 
+
+        //eventos do mouse
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function clicar() {
+            area.innerText = 'Clicou na DIV'
+        }
+
+        function entrar() {
+            area.innerText = 'Entrou na DIV'
+        }
+
+        function sair() {
+            area.innerText = 'Saiu da DIV'
+        }
+    </script>
+
+</body>
+</html>
