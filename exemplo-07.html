@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+
+<body>
+    <h1>Sistema de multas do DETRAN</h1>
+
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel">km/h
+    <input type="button" value="Verificar" onclick="calcularVelocidade()"> 
+    <div id="resultado"></div>
+</body>
+
+<script>
+    
+    function calcularVelocidade() {
+        var limiteDaVia = 80 //declarando o limite da via, para não usar números mágicos no decorrer do código
+        var txtvelocidade = document.getElementById('txtvel')
+        var resultado = document.getElementById('resultado')
+        var velocidade = Number(txtvelocidade.value)
+
+        
+        resultado.innerHTML = `<p> Sua velocidade atual é <strong> ${velocidade}km/h. </strong> </p>`
+
+        if(velocidade > limiteDaVia) {
+            resultado.innerHTML += `Você ultrapassou a velocidade permitida da via, então foi <strong>multado</strong>!`
+        }
+
+        resultado.innerHTML += `<p> Respeite sempre as leis de trânsito! </p>` //utilizando de concatenação de Strings
+    }
+</script>
+</html>
