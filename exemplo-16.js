@@ -40,3 +40,14 @@ function fatorial(numero) {
 
 console.log(fatorial(5))
 
+//5. exemplo utilizando a recursividade de uma função:
+
+function calcularFatorial(numero) {
+    if(numero == 1) {
+        return 1
+    } else {
+        return numero * calcularFatorial(numero - 1)
+    }
+}
+
+console.log(calcularFatorial(5))
