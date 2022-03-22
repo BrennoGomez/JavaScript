@@ -27,3 +27,16 @@ let variavel = function(x) {
 }
 
 console.log(variavel(11))
+
+//4. exemplo calculando o fatorial de um número
+
+function fatorial(numero) {
+    let fatorial = 1
+    for(let contador = numero; contador > 1; contador --){
+        fatorial *= contador
+    }
+    return fatorial
+}
+
+console.log(fatorial(5))
+
