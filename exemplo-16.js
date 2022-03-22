@@ -20,3 +20,10 @@ function soma(n1 = 0, n2 = 0) {
 
 console.log(soma(13, 10))
 
+//3. exemplo colocando um função dentro de uma variável. Exemplo do dobro de um número.
+
+let variavel = function(x) {
+    return x * 2
+}
+
+console.log(variavel(11))
